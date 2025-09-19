@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_21db5feec7802d95fe17ac098bf877de {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_21db5feec7802d95fe17ac098bf877de" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_21db5feec7802d95fe17ac098bf877de = L.map(
+                "map_21db5feec7802d95fe17ac098bf877de",
+                {
+                    center: [-6.728427141999999, -76.732258252],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0c8d137885632e1d4a2730f93735fd1b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0c8d137885632e1d4a2730f93735fd1b.addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+            var circle_marker_24ae236e9210859cc36b8b0ec3dd1b96 = L.circleMarker(
+                [-6.49453094, -76.34874546],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_13f23cf02b5ef9b6a918ccc5245503bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7d312440d55310dcf1987fc56d340a76 = $(`<div id="html_7d312440d55310dcf1987fc56d340a76" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL TARAPOTO</b><br>             Distrito: TARAPOTO<br>             Provincia: SAN MARTIN<br>             Casos: 74,908<br>             Riesgo: Alto             </div>`)[0];
+                popup_13f23cf02b5ef9b6a918ccc5245503bd.setContent(html_7d312440d55310dcf1987fc56d340a76);
+            
+        
+
+        circle_marker_24ae236e9210859cc36b8b0ec3dd1b96.bindPopup(popup_13f23cf02b5ef9b6a918ccc5245503bd)
+        ;
+
+        
+    
+    
+            var circle_marker_f7b7baf0b668373272396afa8a6bce09 = L.circleMarker(
+                [-6.05572833, -76.972225],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.601804880653601, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_40066c407e1a3befb6f7a64ea9eebf0d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7384d77bb6dd08aca592056118f5a38e = $(`<div id="html_7384d77bb6dd08aca592056118f5a38e" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL  MOYOBAMBA</b><br>             Distrito: MOYOBAMBA<br>             Provincia: MOYOBAMBA<br>             Casos: 52,944<br>             Riesgo: Alto             </div>`)[0];
+                popup_40066c407e1a3befb6f7a64ea9eebf0d.setContent(html_7384d77bb6dd08aca592056118f5a38e);
+            
+        
+
+        circle_marker_f7b7baf0b668373272396afa8a6bce09.bindPopup(popup_40066c407e1a3befb6f7a64ea9eebf0d)
+        ;
+
+        
+    
+    
+            var circle_marker_dc347351f36c1b0d2b81ce74896bde2d = L.circleMarker(
+                [-6.02725543, -76.98275366],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.139637955892562, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_0135d07a5bd6b4bb6efb8c30e80ee97b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94cf53a197ee2a3a307f2dfd5cade7fe = $(`<div id="html_94cf53a197ee2a3a307f2dfd5cade7fe" style="width: 100.0%; height: 100.0%;">             <b>LLUYLLUCUCHA</b><br>             Distrito: MOYOBAMBA<br>             Provincia: MOYOBAMBA<br>             Casos: 50,636<br>             Riesgo: Medio             </div>`)[0];
+                popup_0135d07a5bd6b4bb6efb8c30e80ee97b.setContent(html_94cf53a197ee2a3a307f2dfd5cade7fe);
+            
+        
+
+        circle_marker_dc347351f36c1b0d2b81ce74896bde2d.bindPopup(popup_0135d07a5bd6b4bb6efb8c30e80ee97b)
+        ;
+
+        
+    
+    
+            var circle_marker_56ea906be1b8acb5c97e83e483649465 = L.circleMarker(
+                [-7.18143172, -76.73532961],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.216278635125756, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_fc76de545dac31c4418835a2f5848ea4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ac4b465606ab32c303b1915c9fe66200 = $(`<div id="html_ac4b465606ab32c303b1915c9fe66200" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL JUANJUI</b><br>             Distrito: JUANJUI<br>             Provincia: MARISCAL CACERES<br>             Casos: 41,031<br>             Riesgo: Medio             </div>`)[0];
+                popup_fc76de545dac31c4418835a2f5848ea4.setContent(html_ac4b465606ab32c303b1915c9fe66200);
+            
+        
+
+        circle_marker_56ea906be1b8acb5c97e83e483649465.bindPopup(popup_fc76de545dac31c4418835a2f5848ea4)
+        ;
+
+        
+    
+    
+            var circle_marker_d35bb012d5006bd3699aab732fabf751 = L.circleMarker(
+                [-6.05584558, -77.1694907],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.232645378330751, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_83e51963e6ddf8b6caa91d1e474f0afa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7bb32c2cfe1c89d1889bc493c599b0c2 = $(`<div id="html_7bb32c2cfe1c89d1889bc493c599b0c2" style="width: 100.0%; height: 100.0%;">             <b>NUEVA RIOJA</b><br>             Distrito: RIOJA<br>             Provincia: RIOJA<br>             Casos: 31,125<br>             Riesgo: Medio             </div>`)[0];
+                popup_83e51963e6ddf8b6caa91d1e474f0afa.setContent(html_7bb32c2cfe1c89d1889bc493c599b0c2);
+            
+        
+
+        circle_marker_d35bb012d5006bd3699aab732fabf751.bindPopup(popup_83e51963e6ddf8b6caa91d1e474f0afa)
+        ;
+
+        
+    
+    
+            var circle_marker_c6bd255505cdb287038822cf4e2b8461 = L.circleMarker(
+                [-7.05457844, -76.58256361],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.184185934746623, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_6cb2a28caa8eead4518739dec9341740 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_27be709e547982630e37d65995a694ba = $(`<div id="html_27be709e547982630e37d65995a694ba" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL BELLAVISTA</b><br>             Distrito: BELLAVISTA<br>             Provincia: BELLAVISTA<br>             Casos: 30,883<br>             Riesgo: Medio             </div>`)[0];
+                popup_6cb2a28caa8eead4518739dec9341740.setContent(html_27be709e547982630e37d65995a694ba);
+            
+        
+
+        circle_marker_c6bd255505cdb287038822cf4e2b8461.bindPopup(popup_6cb2a28caa8eead4518739dec9341740)
+        ;
+
+        
+    
+    
+            var circle_marker_ddef0b1d20f15c928da541a14bce5501 = L.circleMarker(
+                [-6.94190667, -76.76902167],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.824945266193197, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_2f7e782e4bc38bbfa76b72e347801126 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54d19df57bbbb08292393989c2966bb9 = $(`<div id="html_54d19df57bbbb08292393989c2966bb9" style="width: 100.0%; height: 100.0%;">             <b>RURAL SAPOSOA</b><br>             Distrito: SAPOSOA<br>             Provincia: HUALLAGA<br>             Casos: 29,089<br>             Riesgo: Bajo             </div>`)[0];
+                popup_2f7e782e4bc38bbfa76b72e347801126.setContent(html_54d19df57bbbb08292393989c2966bb9);
+            
+        
+
+        circle_marker_ddef0b1d20f15c928da541a14bce5501.bindPopup(popup_2f7e782e4bc38bbfa76b72e347801126)
+        ;
+
+        
+    
+    
+            var circle_marker_de3abea34baf2e4ef981f5d328699d5e = L.circleMarker(
+                [-6.48441537, -76.38188572],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.824144283654615, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_2afb5d89453fbcfcfb6c2908595e39f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6392dff0251c664bf9ca55909de9ce12 = $(`<div id="html_6392dff0251c664bf9ca55909de9ce12" style="width: 100.0%; height: 100.0%;">             <b>MORALES</b><br>             Distrito: MORALES<br>             Provincia: SAN MARTIN<br>             Casos: 29,085<br>             Riesgo: Bajo             </div>`)[0];
+                popup_2afb5d89453fbcfcfb6c2908595e39f0.setContent(html_6392dff0251c664bf9ca55909de9ce12);
+            
+        
+
+        circle_marker_de3abea34baf2e4ef981f5d328699d5e.bindPopup(popup_2afb5d89453fbcfcfb6c2908595e39f0)
+        ;
+
+        
+    
+    
+            var circle_marker_fb7732482d867bb1aacd68e8e0ba01bf = L.circleMarker(
+                [-8.19046675, -76.51359467],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.572035029636353, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_a2cbff935562f10ac70809556ef1b4a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3b64bf8394c3ead497d3a9a65e64837 = $(`<div id="html_a3b64bf8394c3ead497d3a9a65e64837" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL II-1 TOCACHE</b><br>             Distrito: TOCACHE<br>             Provincia: TOCACHE<br>             Casos: 27,826<br>             Riesgo: Bajo             </div>`)[0];
+                popup_a2cbff935562f10ac70809556ef1b4a1.setContent(html_a3b64bf8394c3ead497d3a9a65e64837);
+            
+        
+
+        circle_marker_fb7732482d867bb1aacd68e8e0ba01bf.bindPopup(popup_a2cbff935562f10ac70809556ef1b4a1)
+        ;
+
+        
+    
+    
+            var circle_marker_25e2bc43048012dcd9b9f5da6cc8e9b7 = L.circleMarker(
+                [-6.05595848, -77.1699847],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.416644417151705, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_3db157c0ee61dbff50fb159bd75322df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_787825d467bdde255732021a88a2c47e = $(`<div id="html_787825d467bdde255732021a88a2c47e" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL DE  RIOJA</b><br>             Distrito: RIOJA<br>             Provincia: RIOJA<br>             Casos: 27,050<br>             Riesgo: Bajo             </div>`)[0];
+                popup_3db157c0ee61dbff50fb159bd75322df.setContent(html_787825d467bdde255732021a88a2c47e);
+            
+        
+
+        circle_marker_25e2bc43048012dcd9b9f5da6cc8e9b7.bindPopup(popup_3db157c0ee61dbff50fb159bd75322df)
+        ;
+
+        
+    
+    
+            var circle_marker_1a3c6a3c687f2bebfabf80e0ff1739dc = L.circleMarker(
+                [-6.49390789, -76.3488037],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.104461472739894, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_cfe678790688ebbf40f125b3a7a79233 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1dfd7f2319b06923cbf5bcbc9e23504b = $(`<div id="html_1dfd7f2319b06923cbf5bcbc9e23504b" style="width: 100.0%; height: 100.0%;">             <b>BANDA SHILCAYO</b><br>             Distrito: LA BANDA DE SHILCAYO<br>             Provincia: SAN MARTIN<br>             Casos: 25,491<br>             Riesgo: Bajo             </div>`)[0];
+                popup_cfe678790688ebbf40f125b3a7a79233.setContent(html_1dfd7f2319b06923cbf5bcbc9e23504b);
+            
+        
+
+        circle_marker_1a3c6a3c687f2bebfabf80e0ff1739dc.bindPopup(popup_cfe678790688ebbf40f125b3a7a79233)
+        ;
+
+        
+    
+    
+            var circle_marker_1ec063311e138621b747f86c904f2135 = L.circleMarker(
+                [-5.81317377, -77.38355845],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.418219682810914, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_5f56d620c1e557b2930edca9aa0ffcf3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_483f93c4bb9c7f51eed8ca494a623ab9 = $(`<div id="html_483f93c4bb9c7f51eed8ca494a623ab9" style="width: 100.0%; height: 100.0%;">             <b>BAJO NARANJILLO</b><br>             Distrito: AWAJUN<br>             Provincia: RIOJA<br>             Casos: 22,064<br>             Riesgo: Bajo             </div>`)[0];
+                popup_5f56d620c1e557b2930edca9aa0ffcf3.setContent(html_483f93c4bb9c7f51eed8ca494a623ab9);
+            
+        
+
+        circle_marker_1ec063311e138621b747f86c904f2135.bindPopup(popup_5f56d620c1e557b2930edca9aa0ffcf3)
+        ;
+
+        
+    
+    
+            var circle_marker_6bf9e0562ba87766d2050a6a91dfec6b = L.circleMarker(
+                [-8.45882794, -76.46368063],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.156298392695039, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_884a1cfac5d21446e0cec8f78796ea31 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e6a73330e13925844289bfc31106309 = $(`<div id="html_2e6a73330e13925844289bfc31106309" style="width: 100.0%; height: 100.0%;">             <b>UCHIZA</b><br>             Distrito: UCHIZA<br>             Provincia: TOCACHE<br>             Casos: 20,756<br>             Riesgo: Bajo             </div>`)[0];
+                popup_884a1cfac5d21446e0cec8f78796ea31.setContent(html_2e6a73330e13925844289bfc31106309);
+            
+        
+
+        circle_marker_6bf9e0562ba87766d2050a6a91dfec6b.bindPopup(popup_884a1cfac5d21446e0cec8f78796ea31)
+        ;
+
+        
+    
+    
+            var circle_marker_d85f46dc816d9c80392ca070881c1378 = L.circleMarker(
+                [-6.13667667, -77.10437333],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.040155924600844, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_d383732a4a6e4f35cc8fc2ed2f13b77f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c6a731a06e66551ef4258ad9ce2b58b5 = $(`<div id="html_c6a731a06e66551ef4258ad9ce2b58b5" style="width: 100.0%; height: 100.0%;">             <b>SORITOR</b><br>             Distrito: SORITOR<br>             Provincia: MOYOBAMBA<br>             Casos: 20,176<br>             Riesgo: Bajo             </div>`)[0];
+                popup_d383732a4a6e4f35cc8fc2ed2f13b77f.setContent(html_c6a731a06e66551ef4258ad9ce2b58b5);
+            
+        
+
+        circle_marker_d85f46dc816d9c80392ca070881c1378.bindPopup(popup_d383732a4a6e4f35cc8fc2ed2f13b77f)
+        ;
+
+        
+    
+    
+            var circle_marker_4060c4fc118d8f14a6ed321219bbb4cc = L.circleMarker(
+                [-5.93988648, -77.30657775],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.89077268115555, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_3148291bb77a44fbaa247b44e9617cc4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2781f15f25a6622f8e1c4877129fa9e7 = $(`<div id="html_2781f15f25a6622f8e1c4877129fa9e7" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL RURAL NUEVA CAJAMARCA</b><br>             Distrito: NUEVA CAJAMARCA<br>             Provincia: RIOJA<br>             Casos: 19,430<br>             Riesgo: Bajo             </div>`)[0];
+                popup_3148291bb77a44fbaa247b44e9617cc4.setContent(html_2781f15f25a6622f8e1c4877129fa9e7);
+            
+        
+
+        circle_marker_4060c4fc118d8f14a6ed321219bbb4cc.bindPopup(popup_3148291bb77a44fbaa247b44e9617cc4)
+        ;
+
+        
+    
+    
+            var circle_marker_15b6630264fa83074dc9b2c384abfd89 = L.circleMarker(
+                [-6.91805902, -76.3302071],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.65888823623645, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_c57666a88e1989c36053432be9341e01 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e9eb4e90ada5b94dc927cf93a3bbf534 = $(`<div id="html_e9eb4e90ada5b94dc927cf93a3bbf534" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL RURAL  PICOTA</b><br>             Distrito: PICOTA<br>             Provincia: PICOTA<br>             Casos: 18,272<br>             Riesgo: Bajo             </div>`)[0];
+                popup_c57666a88e1989c36053432be9341e01.setContent(html_e9eb4e90ada5b94dc927cf93a3bbf534);
+            
+        
+
+        circle_marker_15b6630264fa83074dc9b2c384abfd89.bindPopup(popup_c57666a88e1989c36053432be9341e01)
+        ;
+
+        
+    
+    
+            var circle_marker_2e4c9dcb84831be3f938bb631db4e9ae = L.circleMarker(
+                [-6.41549003, -76.51878761],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.377943610829284, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_0c1fd968d030be6ed2edfcd69a9ca2c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a75bbf742e4f1f82ea1c07ce65b1fd56 = $(`<div id="html_a75bbf742e4f1f82ea1c07ce65b1fd56" style="width: 100.0%; height: 100.0%;">             <b>HOSPITAL LAMAS</b><br>             Distrito: LAMAS<br>             Provincia: LAMAS<br>             Casos: 16,869<br>             Riesgo: Bajo             </div>`)[0];
+                popup_0c1fd968d030be6ed2edfcd69a9ca2c8.setContent(html_a75bbf742e4f1f82ea1c07ce65b1fd56);
+            
+        
+
+        circle_marker_2e4c9dcb84831be3f938bb631db4e9ae.bindPopup(popup_0c1fd968d030be6ed2edfcd69a9ca2c8)
+        ;
+
+        
+    
+    
+            var circle_marker_8a3a00742afe9eb8f01ba5da329cbc52 = L.circleMarker(
+                [-6.48597333, -76.372355],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.229161104287925, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_f3535563f1a91dcf3a6c1be388f03548 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f5b6bf49705e984511ff27ddb6312f50 = $(`<div id="html_f5b6bf49705e984511ff27ddb6312f50" style="width: 100.0%; height: 100.0%;">             <b>NUEVE DE ABRIL</b><br>             Distrito: TARAPOTO<br>             Provincia: SAN MARTIN<br>             Casos: 16,126<br>             Riesgo: Bajo             </div>`)[0];
+                popup_f3535563f1a91dcf3a6c1be388f03548.setContent(html_f5b6bf49705e984511ff27ddb6312f50);
+            
+        
+
+        circle_marker_8a3a00742afe9eb8f01ba5da329cbc52.bindPopup(popup_f3535563f1a91dcf3a6c1be388f03548)
+        ;
+
+        
+    
+    
+            var circle_marker_3b839c5f661a5068951c8335cf456aa1 = L.circleMarker(
+                [-6.91618, -76.86776],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.198123030917927, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_4da1f5b8cb5ddb572fe3021271ee684f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8b74b516ccdcc0ef99c2e12b78fd9fda = $(`<div id="html_8b74b516ccdcc0ef99c2e12b78fd9fda" style="width: 100.0%; height: 100.0%;">             <b>EL DORADO</b><br>             Distrito: SAPOSOA<br>             Provincia: HUALLAGA<br>             Casos: 15,971<br>             Riesgo: Bajo             </div>`)[0];
+                popup_4da1f5b8cb5ddb572fe3021271ee684f.setContent(html_8b74b516ccdcc0ef99c2e12b78fd9fda);
+            
+        
+
+        circle_marker_3b839c5f661a5068951c8335cf456aa1.bindPopup(popup_4da1f5b8cb5ddb572fe3021271ee684f)
+        ;
+
+        
+    
+    
+            var circle_marker_6169de67cb267080e25d0ac64ad34ddc = L.circleMarker(
+                [-8.44825, -76.32346667],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.110615688577989, "stroke": true, "weight": 1}
+            ).addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+    
+        var popup_9d508ca7140b3dacfa98e640094199d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b96fd4e3b037022e855f0b72254656a8 = $(`<div id="html_b96fd4e3b037022e855f0b72254656a8" style="width: 100.0%; height: 100.0%;">             <b>NUEVO  PROGRESO</b><br>             Distrito: NUEVO PROGRESO<br>             Provincia: TOCACHE<br>             Casos: 15,534<br>             Riesgo: Bajo             </div>`)[0];
+                popup_9d508ca7140b3dacfa98e640094199d8.setContent(html_b96fd4e3b037022e855f0b72254656a8);
+            
+        
+
+        circle_marker_6169de67cb267080e25d0ac64ad34ddc.bindPopup(popup_9d508ca7140b3dacfa98e640094199d8)
+        ;
+
+        
+    
+    
+            var heat_map_ff7e74a57ed10bcd8c2b65077f6836e9 = L.heatLayer(
+                [[-6.49453094, -76.34874546, 74908], [-6.05572833, -76.972225, 52944], [-6.02725543, -76.98275366, 50636], [-7.18143172, -76.73532961, 41031], [-6.05584558, -77.1694907, 31125], [-7.05457844, -76.58256361, 30883], [-6.94190667, -76.76902167, 29089], [-6.48441537, -76.38188572, 29085], [-8.19046675, -76.51359467, 27826], [-6.05595848, -77.1699847, 27050], [-6.49390789, -76.3488037, 25491], [-5.81317377, -77.38355845, 22064], [-8.45882794, -76.46368063, 20756], [-6.13667667, -77.10437333, 20176], [-5.93988648, -77.30657775, 19430], [-6.91805902, -76.3302071, 18272], [-6.41549003, -76.51878761, 16869], [-6.48597333, -76.372355, 16126], [-6.91618, -76.86776, 15971], [-8.44825, -76.32346667, 15534]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 10,
+  "gradient": {
+  0.0: "blue",
+  0.3: "cyan",
+  0.5: "lime",
+  0.7: "yellow",
+  1.0: "red",
+},
+}
+            );
+        
+    
+            heat_map_ff7e74a57ed10bcd8c2b65077f6836e9.addTo(map_21db5feec7802d95fe17ac098bf877de);
+        
+</script>
+</html>

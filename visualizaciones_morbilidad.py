@@ -39,6 +39,15 @@ class VisualizadorMorbilidad:
         print(f"📊 Cargando muestra representativa de {n_sample:,} registros...")
 
         try:
+            # Parámetros robustos para CSV con diferentes formatos
+            csv_params = {
+                'sep': ';',  # El archivo usa punto y coma como separador
+                'encoding': 'utf-8',
+                'on_bad_lines': 'skip',  # Saltar líneas problemáticas
+                'dtype': str,  # Cargar todo como string inicialmente
+                'engine': 'python'  # Usar motor Python para mejor manejo de errores
+            }
+
             # Cargar muestra aleatoria
             # Primero contar líneas totales
             total_lines = sum(
@@ -53,8 +62,11 @@ class VisualizadorMorbilidad:
                 )
             )
 
-            self.df_sample = pd.read_csv(self.archivo_datos, skiprows=skip_rows)
+            self.df_sample = pd.read_csv(self.archivo_datos, skiprows=skip_rows, **csv_params)
             print(f"✅ Muestra cargada: {len(self.df_sample):,} registros")
+
+            # Convertir columnas numéricas
+            self._convertir_tipos_numericos()
 
             return True
 
@@ -62,12 +74,52 @@ class VisualizadorMorbilidad:
             print(f"❌ Error al cargar muestra: {e}")
             # Fallback: cargar primeros N registros
             try:
-                self.df_sample = pd.read_csv(self.archivo_datos, nrows=n_sample)
+                csv_params['nrows'] = n_sample
+                self.df_sample = pd.read_csv(self.archivo_datos, **csv_params)
                 print(f"⚠️  Usando primeros {n_sample:,} registros como muestra")
+
+                # Convertir columnas numéricas
+                self._convertir_tipos_numericos()
+
                 return True
             except Exception as e2:
                 print(f"❌ Error en fallback: {e2}")
-                return False
+
+                # Último fallback: intentar con delimitador comma
+                try:
+                    csv_params['sep'] = ','
+                    csv_params['nrows'] = min(10000, n_sample)  # Muestra más pequeña
+                    self.df_sample = pd.read_csv(self.archivo_datos, **csv_params)
+                    print(f"⚠️  Usando muestra reducida de {len(self.df_sample):,} registros con separador comma")
+
+                    # Convertir columnas numéricas
+                    self._convertir_tipos_numericos()
+
+                    return True
+                except Exception as e3:
+                    print(f"❌ Error final: {e3}")
+                    return False
+
+    def _convertir_tipos_numericos(self):
+        """
+        Convierte las columnas apropiadas a tipos numéricos
+        """
+        if self.df_sample is None:
+            return
+
+        # Columnas que deberían ser numéricas
+        columnas_numericas = ['CASOS', 'ANIO', 'MES', 'LATITUD', 'LONGITUD',
+                             'CODIGO_RED', 'CODIGO_MICRORED', 'CODIGO_UNICO']
+
+        for col in columnas_numericas:
+            if col in self.df_sample.columns:
+                try:
+                    # Convertir a numérico, errores como NaN
+                    self.df_sample[col] = pd.to_numeric(self.df_sample[col], errors='coerce')
+                except Exception as e:
+                    print(f"⚠️  No se pudo convertir {col} a numérico: {e}")
+
+        print(f"✅ Tipos de datos ajustados para {len(self.df_sample.columns)} columnas")
 
     def generar_dashboard_exploratorio(self):
         """
@@ -550,7 +602,7 @@ class VisualizadorMorbilidad:
 
 def main():
     """Función principal"""
-    archivo_datos = "data/morbilidad-2024-1-2025-09-18.csv"
+    archivo_datos = "data/morbilidad_2024.csv"
 
     print("🎨 GENERADOR DE VISUALIZACIONES - MORBILIDAD SAN MARTÍN")
     print("=" * 60)

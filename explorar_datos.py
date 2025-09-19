@@ -25,7 +25,7 @@ def explorar_estructura_inicial():
     print("Cargando muestra inicial...")
     try:
         # Leer primeras 1000 filas para análisis inicial
-        df_sample = pd.read_csv("data/morbilidad-2024-1-2025-09-18.csv", nrows=1000)
+        df_sample = pd.read_csv("data/morbilidad_2024.csv", nrows=1000, sep=';', encoding='utf-8')
         print(
             f"Muestra cargada: {df_sample.shape[0]} filas, {df_sample.shape[1]} columnas"
         )
@@ -78,7 +78,7 @@ def explorar_estructura_inicial():
         print("=" * 40)
 
         # Contar líneas totales del archivo (más rápido que cargar todo)
-        with open("data/morbilidad-2024-1-2025-09-18.csv", "r", encoding="utf-8") as f:
+        with open("data/morbilidad_2024.csv", "r", encoding="utf-8") as f:
             total_lines = sum(1 for line in f)
 
         total_rows = total_lines - 1  # Restar header
@@ -149,7 +149,7 @@ if __name__ == "__main__":
         targets, demograficas = analizar_columnas_clave(df_sample)
 
         # Guardar muestra para análisis posterior
-        df_sample.to_csv("muestra_datos.csv", index=False)
+        df_sample.to_csv("data/muestra_datos.csv", index=False)
         print(f"\nMuestra guardada en 'muestra_datos.csv' para análisis posterior")
 
         print("\n" + "=" * 60)

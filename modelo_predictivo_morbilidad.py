@@ -564,7 +564,7 @@ def main():
     """
     Función principal para ejecutar el análisis
     """
-    archivo_datos = "data/morbilidad-2024-1-2025-09-18.csv"
+    archivo_datos = "data/morbilidad_2024.csv"
 
     print("🏥 SISTEMA PREDICTIVO DE MORBILIDAD - SAN MARTÍN 2024")
     print("=" * 60)
